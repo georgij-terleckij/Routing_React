@@ -1,7 +1,12 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
 
-const User = ({match}) => <p>{match.params.id}</p>
+const User = ({match}) => (
+    <div>
+        <p>{match.params.id}</p>
+        <h1>it is  tpl {match.params.id}</h1>
+    </div>
+    )
 
 class Users extends React.Component {
     render() {
