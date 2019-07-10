@@ -12,6 +12,9 @@ import App from './App';
 import Users from './users';
 import Contact from './contact';
 import Notfound from './notfound';
+import Table from './table';
+import TodoApp from "./todo";
+
 
 const routing = (
     <Router>
@@ -33,6 +36,16 @@ const routing = (
                             Contact
                         </NavLink>
                     </li>
+                    <li  className="nav-item">
+                        <NavLink activeClassName="active" className="nav-link" to="/table">
+                            Table
+                        </NavLink>
+                    </li>
+                    <li  className="nav-item">
+                        <NavLink activeClassName="active" className="nav-link" to="/todoapp">
+                            TodoApp
+                        </NavLink>
+                    </li>
 
                 </ul>
             </div>
@@ -47,6 +60,8 @@ const routing = (
                     <Route exact path="/" component={App}/>
                     <Route path="/users" component={Users}/>
                     <Route path="/contact" component={Contact}/>
+                    <Route path="/table" component={Table}/>
+                    <Route path="/todoapp" component={TodoApp}/>
                     <Route component={Notfound}/>
                 </Switch>
             </div>
