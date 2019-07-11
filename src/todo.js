@@ -22,6 +22,8 @@ class TodoApp extends React.Component {
             <div>
                 <h3>TODO</h3>
                 <TodoList items={this.state.items} removeTodo={this.removeTodo}/>
+                <br/>
+                {/*<ControlledTabs />*/}
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="new-todo">
                         What needs to be done?
@@ -85,5 +87,52 @@ class TodoList extends React.Component {
         );
     }
 }
+//
+// class TodoList extends React.Component {
+//
+//     removeItem(id) {
+//         this.props.removeTodo(id);
+//     }
+//
+//     render() {
+//         return (
+//             <ul className="input-teg">
+//                 {this.props.items.map((item, i) => (
+//                     <li key={item.id}>{item.text}</li>
+//                 ))}
+//             </ul>
+//         );
+//     }
+// }
+//
+// class ControlledTabs extends React.Component {
+//     constructor(props, context) {
+//         super(props, context);
+//         this.state = {
+//             key: 'home',
+//         };
+//     }
+//
+//     render() {
+//         return (
+//             <Tabs
+//                 id="controlled-tab-example"
+//                 activeKey={this.state.key}
+//                 onSelect={key => this.setState({ key })}
+//             >
+//                 <Tab eventKey="home" title="Home">
+//                     <Sonnet />
+//                 </Tab>
+//                 <Tab eventKey="profile" title="Profile">
+//                     <Sonnet />
+//                 </Tab>
+//                 <Tab eventKey="contact" title="Contact" disabled>
+//                     <Sonnet />
+//                 </Tab>
+//             </Tabs>
+//         );
+//     }
+// }
+
 
 export default TodoApp;
