@@ -14,6 +14,7 @@ import Contact from './contact';
 import Notfound from './notfound';
 import Table from './table';
 import TodoApp from "./todo";
+import TodoApp2 from "./todo2";
 import TabView from "./TabView";
 
 
@@ -48,6 +49,11 @@ const routing = (
                         </NavLink>
                     </li>
                     <li  className="nav-item">
+                        <NavLink activeClassName="active" className="nav-link" to="/todoapp2">
+                            TodoApp2
+                        </NavLink>
+                    </li>
+                    <li  className="nav-item">
                         <NavLink activeClassName="active" className="nav-link" to="/tabview">
                             TabView
                         </NavLink>
@@ -68,6 +74,7 @@ const routing = (
                     <Route path="/contact" component={Contact}/>
                     <Route path="/table" component={Table}/>
                     <Route path="/todoapp" component={TodoApp}/>
+                    <Route path="/todoapp2" component={TodoApp2}/>
                     <Route path="/tabview" component={TabView}/>
                     <Route component={Notfound}/>
                 </Switch>
